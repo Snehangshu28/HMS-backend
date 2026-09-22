@@ -1,0 +1,22 @@
+{
+  "_id": { "$oid": "6a6fa292f38f48924831a316" },
+  "name": "CareFlow General Hospital",
+  "subdomain": "careflow",
+  "address": {
+    "street": "12 Health Avenue",
+    "city": "Kolkata",
+    "state": "WB",
+    "zip": "700001"
+  },
+  "contact": {
+    "email": "admin@hospital.com",
+    "phone": "+91-9876500000"
+  },
+  "subscription": {
+    "plan": "Pro",
+    "status": "Active"
+  },
+  "isActive": true,
+  "createdAt": { "$date": "2026-08-02T20:03:30.463Z" },
+  "updatedAt": { "$date": "2026-08-02T20:03:30.463Z" }
+}

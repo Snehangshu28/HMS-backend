@@ -1,0 +1,52 @@
+{
+  "database": "hms-saas",
+  "login": {
+    "email": "admin@hospital.com",
+    "password": "password"
+  },
+  "collections": {
+    "hospitals": {
+      "_id": { "$oid": "6a6fa292f38f48924831a316" },
+      "name": "CareFlow General Hospital",
+      "subdomain": "careflow",
+      "address": {
+        "street": "12 Health Avenue",
+        "city": "Kolkata",
+        "state": "WB",
+        "zip": "700001"
+      },
+      "contact": {
+        "email": "admin@hospital.com",
+        "phone": "+91-9876500000"
+      },
+      "subscription": {
+        "plan": "Pro",
+        "status": "Active"
+      },
+      "isActive": true,
+      "createdAt": { "$date": "2026-08-02T20:03:30.463Z" },
+      "updatedAt": { "$date": "2026-08-02T20:03:30.463Z" }
+    },
+    "users": {
+      "_id": { "$oid": "6a6fa292f38f48924831a317" },
+      "hospitalId": { "$oid": "6a6fa292f38f48924831a316" },
+      "email": "admin@hospital.com",
+      "passwordHash": "$2a$10$c6AvY1O.jkprJLoOqdy4QeE5DO72QC9cwCvPvFtWWW.a1YBKcmkTK",
+      "role": "Hospital Admin",
+      "name": {
+        "first": "Ananya",
+        "last": "Sen"
+      },
+      "phone": "9876500001",
+      "isActive": true,
+      "deviceTokens": [],
+      "isDeleted": false,
+      "createdAt": { "$date": "2026-08-02T20:03:30.463Z" },
+      "updatedAt": { "$date": "2026-08-02T20:03:30.463Z" }
+    }
+  },
+  "importCommands": [
+    "mongoimport --db hms-saas --collection hospitals --file backend/data/hospital.admin.json --jsonArray=false",
+    "mongoimport --db hms-saas --collection users --file backend/data/user.admin.json --jsonArray=false"
+  ]
+}
